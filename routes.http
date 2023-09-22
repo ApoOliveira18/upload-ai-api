@@ -17,12 +17,14 @@ Content-Type: audio/mpeg
 ###
 
 # @name create-transcription
-POST http://localhost:3333/videos/8b70aa04-20f2-4275-b7c5-f3849424bab8/transcription
-Content-type: application/json
+
+POST http://localhost:3333/videos/2a1a51d0-1cbf-487e-8dbb-107c0411909e/transcription
+Content-Type: application/json
 
 {
-    "prompt": "android, instruções"
+  "prompt": "testando, voz"
 }
+
 
 ###
 
@@ -31,7 +33,8 @@ POST http://localhost:3333/ai/complete
 Content-type: application/json
 
 {
-    "videoId": "8b70aa04-20f2-4275-b7c5-f3849424bab8",
+    "videoId": "2a1a51d0-1cbf-487e-8dbb-107c0411909e",
+    "videoId": "",
     "temperature": 0.5,
     "prompt": "Gere um resumo da transcrição do vídeo informada a seguir: '''{transcription}'''"
 }
